@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="score-container">
+        <div class="rps"> 
+            <div>ROCK</div>
+            <div>PAPER</div>
+            <div>SCISSORS</div>
+        </div>
+        <div class="scoreCards">
+        <div class="score" >
+            <div class="score-title">Your</div>
+            <div class="score-title">Score</div>
+                <div class="score-value"id="playerScore">${playerScore}</div>
+         </div>
+        <div class="score" > 
+            <div class="score-title">Computer </div>
+            <div class="score-title">Score</div>
+                <div class="score-value" id="computerScore">${computerScore}</div>
+    </div>
+    </div></div>
+    <div class="game-container">
+        
+        <div id="gameZone" class="game-zone">
+            
+                <div class="icons">
+                <div class="game-image-container" id="rockContainer" style="grid-area: rock"  >
+                    <img src="./assets/rock.png" alt="Rock" class="game-image" id="rockImage" onclick="playGame('rock')">
+                </div>
+                <div class="game-image-container" id="paperContainer" style="grid-area: paper">
+                    <img src="./assets/paper.png" alt="Paper" class="game-image" id="paperImage" onclick="playGame('paper')">
+                </div>
+                <div class="game-image-container" id="scissorsContainer"  style="grid-area: scissors">
+                    <img src="./assets/scissors.png" alt="Scissors" class="game-image" id="scissorsImage" onclick="playGame('scissors')">
+                </div>
+            </div>
+            
+            <button id="rulesButton" onclick="openRulesModal()">Rules</button>
+        </div>
+    
+            <div id="resultZone" class="result-zone">
+                <div id="result" class="result">
+                    <p>you picked</p>
+                    <p>pc picked</p>
+                </div>
+                <div class="result-images" id="resultImages">
+                   
+                    <div id="playerResultCircle" class="background-circle">
+                        <img src="" alt="Your Choice" id="playerChoiceImage">
+                    </div>
+                    <div class="btw-icons">
+                    <div class="result-text">
+                        <h1>You ('${result} ')</h1><h2>against PC</h2>
+                    </div>
+                    <button id="playAgainButton" onclick="playAgain()">Play Again</button>
+                </div>
+                    <div id="computerResultCircle" class="background-circle">
+                        <img src="" alt="Computer Choice" id="computerChoiceImage">
+                    </div>
+                </div>
+                <!-- Move the "Rules" button here -->
+                
+                <button id="rulesButton" onclick="openRulesModal()">Rules</button>
+            
+                <!-- Move the "Play Again" button here -->
+                <button id="playAgainButton1" onclick="playAgain()">Play Again</button>
+                <!-- Move the "Next" button here -->
+                <button id="nextButton" onclick="showNextPage()">Next</button>
+            </div>
+    <!-- </div> -->
+    <div id="rulesModal" class="modal">
+        <span class="close" onclick="closeRulesModal()">&times;</span>
+        <img src="./assets/rules.png" alt="Rules">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

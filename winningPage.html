@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Winning Page</title>
+</head>
+<body>
+    <div class="winning-container">
+        <div class="image-container">
+            <img src="./assets/wpagestars.png" alt="stars" class="stars-image">
+            <img src="./assets/trophy.png" alt="Trophy" class="trophy-image">
+        </div>
+        <h1>HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+        <button id="pAButton" >Play Again</button>
+        <div id="rulesModal" class="modal">
+            <span class="close" onclick="closeRulesModal()">&times;</span>
+            <img src="./assets/rules.png" alt="Rules">
+        </div>
+        <button id="rulesButton" onclick="openRulesModal()">Rules</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
