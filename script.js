@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.playGame = function (playerChoice) {
         const choices = ['rock', 'paper', 'scissors'];
         const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-// nextButton.style.display='none';
+
 
         const result = compareChoices(playerChoice, computerChoice);
         console.log(result);
@@ -67,11 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultZone = document.getElementById('resultZone');
         const playerChoiceImage = document.getElementById('playerChoiceImage');
         const computerChoiceImage = document.getElementById('computerChoiceImage');
-        // resultZone.classList.add('fade-in');
+       
         gameZone.style.display = 'none';
         resultZone.style.display = 'flex';
-        // nextButton.style.display = 'flex';
-        // rulesButton.style.display='flex';
+   
         
 
         playerChoiceImage.src = `./assets/${player}.png`;
@@ -99,11 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
         resultText.textContent = result;
 
     }
-    // resultZone.classList.add('fade-in');
+   
     function applyRingRipple(winner,result) {
         const winnerCircle = document.getElementById(`${winner}ResultCircle`);
-        // const winnerCircle1 = document.getElementById(playerResultCircle);
-        // const winnerCircle2 = document.getElementById(computerResultCircle);
+       
 
         const existingRings = document.querySelectorAll('.ring-ripple');
          existingRings.forEach(ring => ring.remove());
